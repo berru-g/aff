@@ -1,0 +1,155 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://github.com/berru-g/Price-comparator/blob/master/src/around-the-world.gif?raw=true" />
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name=description
+    content="Les meilleures offres de vol et d'hôtel pour vous permettre de voyager comme un roi, sans vous soucier des coûts élevés">
+  <meta name=author content>
+  <meta name=keywords content="amsterdam hotel, hotel amsterdam, bon plan booking, vols pas cher, partir pas cher">
+  <meta property=og:url content=https://github.com/berru-g />
+  <link rel=canonical href=https://github.com/berru-g />
+  <title>No Bullshit Just Travel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFMNXG8LK6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JFMNXG8LK6');
+  </script>
+</head>
+<header>
+  <h1>No Bullshit Just Travel</h1>
+  <p>You don't have to be rich to travel like a king</p>
+  <nav>
+    </br>
+    <ul id="menu">
+      <li id="icon"><a
+          href="../index.html"
+          title="Hôtel"><i class="mdi mdi-home"></i> hôtel</a></li>
+      <li id="icon"><a href="dist\index.html" title="Avion"><i class="mdi mdi-airplane"></i> vols</a></li>
+      <li id="icon"><a href="#" title="Car"><i class="mdi mdi-car"></i> car</a></li>
+      <li id="icon"><a href="#" title="Festival"><i class="mdi mdi-music-note"></i> Festival</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+  <div id="intro">
+    <h5>Explore the world without breaking the bank</h5></br>
+    <p>... <!--<button onclick="open()"> Recevoir les dernières offres</button>.--></p>
+  </div>
+  <div class="gallery">
+    <div style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/square600/331967743.webp?k=274d5add85b6638ebee3a7f0e24f8a6623dc46a170eb8cc06627a543674af574&o=&s=1');"></div>
+    <div style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1280x900/446731316.jpg?k=d8933930dbd252d3a704a03443e30c9d78e1a96eac6a8e775a666b0f4c1ca53d&o=&hp=1');"></div>
+    <div style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/square600/192222259.webp?k=8a61b65a273e5e7190c92c2aacc4d956d47527ab950451cb9a5a223fad225b57&o=&s=1');"></div>
+    <div style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/square600/213819734.webp?k=be79fd0c9050646ec912726b4aa0a03e8ad47370494af51d9183cde71eeb1b64&o=&s=1');"></div>
+  </div>
+  <main>
+    <section class="hotels">
+      <h2>Les bons plans de nos partenaires</h2>
+      <ul>
+        <!--article 4-->
+        <li id="product"
+          data-affiliate-url="https://www.booking.com/hotel/nl/estherea.en-gb.html?aid=2334866&sid=4464237e067cab8dd8574f7526222e84&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=3;hpos=3;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&#hotelTmpl">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/square600/192222259.webp?k=8a61b65a273e5e7190c92c2aacc4d956d47527ab950451cb9a5a223fad225b57&o=&s=1"
+            alt="Hotel Estheréa">
+          <h3>Hotel Estheréa</h3>
+          <p> Stay in the heart of Amsterdam. Hotel Estheréa is set along the Singel canal in the centre of Amsterdam.
+            </br>Read <a
+              href="https://www.booking.com/hotel/nl/estherea.en-gb.html?aid=2334866&sid=4464237e067cab8dd8574f7526222e84&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=3;hpos=3;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&#tab-reviews">tab
+              reviews</a>.</p>
+          <span class="price">À partir de 48 €/ nuit</span>
+          <button onclick="openBooking(this)">Réserver maintenant</button>
+          </a>
+          <div class="hotel-item">
+            <div class="hotel-rating" title="4.6/5 3.972 votes">
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+            </div>
+            <div class="article">
+              <i class="mdi mdi-silverware-fork-knife" id="unavailable" title="repas inclus"></i>
+              <i class="mdi mdi-wifi" id="available" title="wifi-inclus"></i>
+              <i class="mdi mdi-city" id="available" title="proche du centre"></i>
+              <i class="mdi mdi-dumbbell" id="available" title="salle de sport"></i>
+            </div>
+          </div>
+        </li>
+        <!--article 5-->
+        <li id="product"
+          data-affiliate-url="https://www.booking.com/hotel/nl/casa-400.en-gb.html?aid=2334866&sid=b1d577e73224c5de2cb93c30ad443eb2&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=15;hpos=15;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/square600/213819734.webp?k=be79fd0c9050646ec912726b4aa0a03e8ad47370494af51d9183cde71eeb1b64&o=&s=1"
+            alt="Sélection hotel nobullshitjusttravel amsterdam">
+          <h3>Hotel Casa Amsterdam</h3>
+          <p>Hotel Casa Amsterdam is a modern hotel offering a bar, rooftop terrace (only opens during the summertime)
+            and an in-house restaurant.</br>Read <a
+              href="https://www.booking.com/hotel/nl/casa-400.en-gb.html?aid=2334866&sid=b1d577e73224c5de2cb93c30ad443eb2&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=15;hpos=15;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&#tab-reviews">tab
+              reviews</a>.</p>
+          <span class="price">À partir de -- €</span>
+          <button onclick="openBooking(this)">Réserver maintenant</button>
+          </a>
+          <div class="hotel-item">
+            <div class="hotel-rating" title="4.8/5 7.002 votes">
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+            </div>
+            <div class="article">
+              <i class="mdi mdi-silverware-fork-knife" id="available" title="repas inclus"></i>
+              <i class="mdi mdi-wifi" id="available" title="wifi-inclus"></i>
+              <i class="mdi mdi-city" id="available" title="proche du centre"></i>
+              <i class="mdi mdi-weather-sunny" id="available" title="terrasse"></i>
+            </div>
+          </div>
+        </li>
+        <!--article 6-->
+        <li id="product"
+          data-affiliate-url="https://www.booking.com/hotel/nl/the-exchange.en-gb.html?aid=2334866&sid=b1d577e73224c5de2cb93c30ad443eb2&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=25;hpos=25;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&#hotelTmpl">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/square600/331967743.webp?k=274d5add85b6638ebee3a7f0e24f8a6623dc46a170eb8cc06627a543674af574&o=&s=1"
+            alt="Voyage 3">
+          <h3>Hotel The Exchange</h3>
+          <p>Situated in the heart of Amsterdam’s city centre, Hotel The Exchange is an independent fashion hotel that
+            playfully weaves together hotel design with fashion in unique rooms.</br>Read <a
+              href="https://www.booking.com/hotel/nl/the-exchange.en-gb.html?aid=2334866&sid=b1d577e73224c5de2cb93c30ad443eb2&dest_id=-2140479;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=25;hpos=25;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1683729262;srpvid=cda0667603390220;type=total;ucfs=1&#tab-reviews">tab
+              reviews</a>.</p>
+          <span class="price">À partir de -- €</span>
+          <button onclick="openBooking(this)">Réserver maintenant</button>
+          </a>
+          <div class="hotel-item">
+            <div class="hotel-rating" title="4.3/5 3.493 votes">
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i class="mdi mdi-star"></i>
+              <i id="unavailable" class="mdi mdi-star"></i>
+            </div>
+            <div class="article">
+              <i class="mdi mdi-silverware-fork-knife" id="available" title="repas inclus"></i>
+              <i class="mdi mdi-wifi" id="available" title="wifi-inclus"></i>
+              <i class="mdi mdi-city" id="available" title="proche du centre"></i>
+              <i class="mdi mdi-image-filter-hdr" id="available" title="vue"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section></br>
+  </main>
+</body>
+  <footer>
+    <p>&copy; NoBullshitJustTravel 2023 - Tous droits réservés - <a
+        href="mailto:lea-bruger@nobullshitjusttravel.com" id="contact">Nous contacter</a></p>
+  </footer>
+</html>

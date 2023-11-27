@@ -1,0 +1,259 @@
+/*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+https://fonts.googleapis.com/css?family=Source+Sans+Pro
+https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/iconfont/material-icons.min.css
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu {}
+
+#icon {
+  border: 0.5px solid white;
+  border-radius: 25px;
+  padding: 1vh 1vh;
+
+}
+
+#icon:hover {
+  opacity: 0.7;
+}
+
+header {
+  background-color: #003580;
+  color: #fff;
+  padding: 20px;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+/* Animation */
+h1 {
+  animation-name: slide-in-left;
+  animation-duration: 1s;
+}
+
+p {
+  animation-name: slide-in-right;
+  animation-duration: 1s;
+}
+
+#icon a {
+  display: inline-block;
+  position: relative;
+  animation-name: bounce-in-top;
+  animation-duration: 1s;
+}
+
+/* Définir les animations */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce-in-top {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+
+}
+
+nav ul li {
+  margin-right: 20px;
+  padding: 3vh 3vh;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  padding: 1vh 1vh;
+}
+
+li {
+  text-align: left;
+}
+
+#intro {
+  padding: 10vh 10vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  padding: 5vh 10vh;
+  display: flex;
+  height: 30rem;
+  gap: 1rem;
+}
+.gallery > div {
+  flex: 1rem;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all .7s cubic-bezier(.25, .4, .45, 1.4);
+}
+.gallery > div:hover {
+  flex:5;
+}
+.liengal {
+  color: #fff;
+  text-align: center;
+  bottom: 0vh;
+  text-decoration: none;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
+  border: 10px solid white;
+  border-radius: 25px;
+}
+
+h3 {
+  color: #666666;
+}
+h4 {
+  color: #009fe3;
+}
+
+.price {
+  margin: 1vh;
+}
+
+.hotel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1vh 1vh;
+  border: 1px solid #374650;
+  border-radius: 8px;
+}
+
+.hotel-rating {
+  font-size: 24px;
+  color: #feba02;
+}
+
+#review {
+  color:#feba02;
+}
+
+/*disponibilité et note color*/
+#available {
+  color: #0ab21b;
+}
+
+#unavailable {
+  color: #666666;
+}
+
+button {
+  margin: 2vh 2vh;
+  padding: 1vh 1vh;
+  align-items: right;
+  background-color: #117ac9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #003580;
+}
+
+.astuce {
+  color: white;
+  padding: 5vh 5vh;
+  background-color: #003580;
+  border: 1px solid #374650;
+  border-radius: 25px;
+}
+strong {
+  color: #feba02;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+section h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+section ul li {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  width: 300px;
+}
+
+section ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  border: 1px;
+}
+
+h2 {
+
+  color: #003580;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  padding: 2vh 2vh;
+  text-align: center;
+  background-color: #003580;
+  color: white;
+  font-size:small;
+  display: flex;
+  justify-content: space-around;
+}
+#contact {
+  color: white;
+  text-decoration: #feba02;
+}
