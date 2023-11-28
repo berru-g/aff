@@ -15,7 +15,7 @@
         content="bonnet Carhartt, bon plan noel, cadeaux pas cher, idees cadeaux, Carhartt">
     <meta name="description"
         content="Découvrez l'ultime confort et style avec nos bonnets Carhartt. Résistants, chauds et tendance, ces accessoires deviendront vos compagnons indispensables. Explorez notre collection dès maintenant.">
-
+    <meta name="google-site-verification" content="ihfEvkX1MgsDxT1yhKGqO2sxs3WeDIzDeO8L6QPGueo" />
     <style>
         /* Réinitialisation des styles par défaut */
         body,
@@ -26,6 +26,8 @@
         li {
             margin: 0;
             padding: 0;
+          z-index: 10;
+          position: relative;
         }
 
         /* Importer la police Roboto depuis Google Fonts */
@@ -76,13 +78,15 @@
             display: flex;
         }
 
-        /*
+        
     .im {
       width: 100%;
       height: auto;
-      margin: auto;
       display: flex;
-    }*/
+      position: absolute;
+      z-index: 0;
+      opacity: 0.4;
+    }
 
         .logo img {
             max-height: 500px;
@@ -199,6 +203,7 @@
 
         /* Animation */
         h1 {
+          position: relative;
             color: #fff;
             animation-name: slide-in-left;
             animation-duration: 2s;
@@ -468,14 +473,14 @@
             }
         }
 
-        a {
+         a {
             color: #fbb812;
             text-decoration: none;
         }
 
         a:hover {
-            text-decoration: #12fb73 wavy underline;
-            color: #fbb930;
+            text-decoration: #1229fb wavy underline;
+            color: #c28e25 ;
         }
 
         .ban {
@@ -558,18 +563,17 @@
     </style>
 </head>
 
+
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8Y10ZY04P"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2LS97LMNE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-L8Y10ZY04P');
+  gtag('config', 'G-F2LS97LMNE');
 </script>
-<!--
-<a target="_blank" href="https://www.amazon.fr/stores/Carhartt/page/A1606391-0726-4D43-A5FD-B62C4D399BCD?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto&_encoding=UTF8&tag=offrenoel06-21&linkCode=ur2&linkId=e4b570bbf40026db7ed1968aea3dbe34&camp=1642&creative=6746">aff-noel</a>
--->
+
 
 <body>
     <header>
@@ -598,7 +602,7 @@
                     // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
                     Swal.fire({
                         title: 'Bons plans',
-                        html: '<ul><li><a href="index.html">Accueil</a></li><li><a href="tuto.html">Tuto</a></li><li><a href="#">Black Friday</a></li><li><a href="#">Nos offres</a></li></ul>',
+                        html: '<ul><li><a href="index.html">Accueil</a></li><li><a href="tuto.html">Tuto</a></li><li><a href="#">Black Friday</a></li><li><a href="carhartt.html">Nos offres</a></li></ul>',
                         showCloseButton: true,
                         showConfirmButton: false,
                         customClass: {
@@ -610,26 +614,19 @@
                 });
             </script>
     </header>
-    <main>
-        <a href="https://amzn.to/3N2sFTg"><img src="https://m.media-amazon.com/images/S/aplus-media/vc/4a910a9c-75e9-401b-ad00-d1dacd421321.__CR0,0,970,300_PT0_SX970_V1___.jpg" alt="Carhartt Noel"
-                class="profile-image"></a>
-        <div class="intro">
-            <h1>Affrontez le Froid avec Style : Découvrez les Bonnets Carhartt</h1>
-            <p>Bienvenue sur Bons plans, votre destination ultime pour les passionnés de qualité ! Si vous cherchez à rester au chaud tout en restant branché, vous êtes au bon endroit.</p>
-        </div>
-
-        <div class="intro">
-            <h2>Plongeons dans l'univers robuste et stylé des bonnets Carhartt.</h2><br>
-            
-            <img class="im"
+      <img class="im"
                 src="https://m.media-amazon.com/images/S/aplus-media/vc/f3e1ac9b-5d68-447d-a31b-fdf339d9dcc4.__CR0,0,970,300_PT0_SX970_V1___.jpg"
                 alt="bonnet Carhartt" />
         </div>
-
+    <main>
+        <div class="intro">
+            <h1>Comment affrontez le Froid avec Style ? Avec les Bonnets Carhartt</h1>
+            <p>Bienvenue chez les exigeants! Si vous cherchez la qualité au meilleur prix vous êtes au bon endroit.</p>
+        </div>
         <section class="scroll-section">
-            <h2>Pourquoi Carhartt ?</h2><br>
-            <p>Les bonnets Carhartt sont bien plus qu'un simple accessoire.</p><br>
-            <p>Fabriqués avec une attention méticuleuse aux détails et conçus pour résister aux conditions les plus difficiles, ces bonnets deviendront rapidement votre allié incontournable contre le froid hivernal.</p>
+            <h2>Pourquoi on a choisi Carhartt ?</h2><br>
+            <p>Parce que leurs bonnets sont intemporel.</p><br>
+            <p>Ils sont fabriqués avec une attention méticuleuse et conçus pour résister aux conditions les plus difficiles, ces bonnets sont votre allié incontournable contre le froid hivernal.</p>
         </section>
 
         <div class="content">
@@ -644,6 +641,7 @@
                     <li><strong>Isolation Thermique Avancée : </strong>Restez au chaud même par les températures les plus glaciales.</li>
                     <li><strong>Durabilité Exceptionnelle :</strong> Fabriqués pour durer, les bonnets Carhartt sont à la hauteur de leur réputation.</li>
                     <li><strong>Style Épuré :</strong> Ajoutez une touche de style à votre tenue quotidienne.</li>
+                  <li><strong>Le prix :</strong> moins de 20€ le bonnet, on adore.</li>
                     <br>
                 </div>
             </div>
@@ -651,9 +649,10 @@
 
             <div class="box">
                 <div class="text">
-                    <h2>Offres Spéciales :</h2><br>
-                    <li>Bonsplans.fr est un site partenaire des offres Amazon.</li>
-                    <li>Découvrez nos offres spéciales exclusives. En ce moment, il faut compter moins de 20€ pour l'achat d'un bonnet Carhartt en passant <a href="https://amzn.to/3RhJWuj">par ce lien partner</a>.</li>
+                    <h2>Nos garanties :</h2><br>
+                    <li>Grâce à notre partenariat avec Amazon, nous vous garantissont la rapidité, la livraison et le retour gratuit, mais comme nous avons choisi Carhartt, nous n'avons pas de retour.</li>
+                    <li>En ce moment, il faut compter 19€ pour un bonnet Carhartt.</li>
+                  <li><a href="https://amzn.to/3RhJWuj">Acheter via Amazon</a>.</li>
                 </div>
                 <section class="scroll-section">
                     <a href="https://amzn.to/3N2sFTg"><img
@@ -664,18 +663,20 @@
         </div>
 
         <div class="intro">
-            <img class="im" src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/796567f7-d570-4cf5-9637-d3d6eee034d7._CR0%2C0%2C3000%2C600_SX1920_.jpg"><br>
-            <h1>Commentaires client: 4,6 étoiles sur 5</h1>
+          <h2>Commentaires client: 4,6 ⭐ / 5</h2><br>
+            <img src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/796567f7-d570-4cf5-9637-d3d6eee034d7._CR0%2C0%2C3000%2C600_SX1920_.jpg"><br>
+            
             <p>Carhartt c'est aussi des jeans, des vestes et manteaux, des chaussures pour les Femmes et les Hommes.</p>
-            <a target="_blank" href="https://www.amazon.fr/stores/Carhartt/page/A1606391-0726-4D43-A5FD-B62C4D399BCD?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto&_encoding=UTF8&tag=offrenoel06-21&linkCode=ur2&linkId=e4b570bbf40026db7ed1968aea3dbe34&camp=1642&creative=6746"><button class="btn">Découvrez</button></a>
+            <p>A l'origine crée pour les artisants, Carhartt fabrique des vétements solide conçu pour durée.</p>
+            <a target="_blank" href="https://www.amazon.fr/stores/Carhartt/page/A1606391-0726-4D43-A5FD-B62C4D399BCD?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto&_encoding=UTF8&tag=offrenoel06-21&linkCode=ur2&linkId=e4b570bbf40026db7ed1968aea3dbe34&camp=1642&creative=6746"><button class="btn">Visitez</button></a>
 
         </div>
         
     </main>
-
+<!--
       <div style="position: relative; width: 100%; padding: 56.25% 0 0 0;">
         <iframe src="https://images-na.ssl-images-amazon.com/images/I/F1Aspzk4B8S.mp4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen autoplay muted></iframe>
-      </div>
+      </div>-->
       
       
     <!--Fork by https://codepen.io/carterfromsl/pen/jOdVZgB -->
@@ -917,7 +918,7 @@
         <div class="footer-section links">
             <h3>Pour passer un bon hiver</h3>
             <ul>
-                <li><a href="https://amzn.to/3sQwYdK">App à raclette</a></li>
+                <li><a href="https://amzn.to/3QRoT0k">App à raclette</a></li>
                 <li><a href="https://amzn.to/3RgBr2J">Veste Carhartt</a></li>
                 <li><a href="https://amzn.to/3Gncn3C">Timberland</a></li>
                 <li><a href="https://amzn.to/47Os7Zp">Echarpe</a></li>
