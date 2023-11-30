@@ -1,22 +1,3 @@
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>les exigeants</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <meta name="keywords"
-        content="bonnet Carhartt, bon plan noel, cadeaux pas cher, idees cadeaux, Carhartt">
-    <meta name="description"
-        content="Découvrez l'ultime confort et style avec nos bonnets Carhartt. Résistants, chauds et tendance, ces accessoires deviendront vos compagnons indispensables. Explorez notre collection dès maintenant.">
-    <meta name="google-site-verification" content="ihfEvkX1MgsDxT1yhKGqO2sxs3WeDIzDeO8L6QPGueo" />
-    <style>
         /* Réinitialisation des styles par défaut */
         body,
         h1,
@@ -26,8 +7,8 @@
         li {
             margin: 0;
             padding: 0;
-          z-index: 10;
-          position: relative;
+            z-index: 10;
+            position: relative;
         }
 
         /* Importer la police Roboto depuis Google Fonts */
@@ -61,18 +42,18 @@
             height: auto;
             margin: auto;
             display: flex;
-          border-radius: 8px;
+            border-radius: 8px;
         }
 
-        
-    .im {
-      width: 100%;
-      height: auto;
-      display: flex;
-      position: absolute;
-      z-index: 0;
-      opacity: 0.4;
-    }
+
+        .im {
+            width: 100%;
+            height: auto;
+            display: flex;
+            position: absolute;
+            z-index: 0;
+            opacity: 0.4;
+        }
 
         .logo img {
             max-height: 500px;
@@ -189,7 +170,7 @@
 
         /* Animation */
         h1 {
-          position: relative;
+            position: relative;
             color: #fff;
             animation-name: slide-in-left;
             animation-duration: 2s;
@@ -459,7 +440,7 @@
             }
         }
 
-         a {
+        a {
             color: #5a8ae7;
             text-decoration: none;
         }
@@ -544,176 +525,14 @@
             max-width: 600px;
             height: auto;
         }
-      .avis {
-        max-width: 500px;
-        height: auto;
-        justify-content: center;
-      }
-    </style>
-</head>
+
+        .avis {
+            max-width: 500px;
+            height: auto;
+            justify-content: center;
+        }
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCKR71R5NJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FCKR71R5NJ');
-</script>
-
-
-<body>
-    <header>
-        <div class="logo">
-            <div class="custom-loader"></div>
-
-        </div>
-        <nav>
-            <div class="menu-container">
-                <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <script>
-                function toggleMenu() {
-                    var menu = document.getElementById("menu");
-                    menu.classList.toggle("show");
-                }
-            </script>
-            <script>
-                const hamburgerMenu = document.querySelector('.hamburger-menu');
-
-                hamburgerMenu.addEventListener('click', () => {
-                    // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
-                    Swal.fire({
-                        title: 'Bons plans',
-                        html: '<ul><li><a href="index.html">Accueil</a></li><li><a href="tuto.html">Tuto</a></li><li><a href="#">Black Friday</a></li><li><a href="carhartt.html">Nos offres</a></li></ul>',
-                        showCloseButton: true,
-                        showConfirmButton: false,
-                        customClass: {
-                            popup: 'custom-swal-popup',
-                            closeButton: 'custom-swal-close-button',
-                            content: 'custom-swal-content',
-                        }
-                    });
-                });
-            </script>
-    </header>
-      <img class="im"
-                src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/2bb3f944-683b-42e8-8696-715fe6a8817c._CR0%2C0%2C3000%2C600_SX1920_.jpg"
-                alt="bonnet Carhartt" />
-        </div>
-    <main>
-        <div class="intro">
-            <h1>Garantie la qualité au meilleur prix</h1>
-            <p>Bienvenue chez les exigeants! Si vous cherchez la qualité au meilleur prix vous êtes au bon endroit.</p>
-        </div>
-        <section class="scroll-section">
-            <h2>Pourquoi on a choisi Carhartt ?</h2><br>
-            <p>A l'origine crée pour les artisants, Carhartt fabrique des vétements solide et conçu pour durer.</p><br>
-            <p>Ils sont fabriqués avec une attention méticuleuse et conçus pour résister aux conditions les plus difficiles. </p>
-        </section>
-
-        <div class="content">
-            <div class="box">
-                <section class="scroll-section">
-                    <a href="https://amzn.to/3N2sFTg"><img
-                            src="https://m.media-amazon.com/images/I/91hEV2SeAjL._AC_SY879_.jpg" alt="Carhartt Noel"/></a>
-                </section><i class="fa-duotone fa-cube fa-2xs"
-                    style="--fa-primary-color: #1a1a1afff; --fa-secondary-color: #1a1a1afff;"></i>
-                <div class="text">
-                    <h2>Caractéristiques Clés :</h2><br>
-                    <li><strong>Isolation Thermique Avancée : </strong>Restez au chaud même par les températures les plus glaciales.</li>
-                    <li><strong>Durabilité Exceptionnelle :</strong> Fabriqués pour durer, les bonnets Carhartt sont à la hauteur de leur réputation.</li>
-                    <li><strong>Style Épuré :</strong> Ajoutez une touche de style à votre tenue quotidienne.</li>
-                  <li><strong>Le prix :</strong> moins de 20€ le bonnet, on adore.</li>
-                    <br>
-                </div>
-            </div>
-
-
-            <div class="box">
-                <div class="text">
-                    <h2>Nos garanties :</h2><br>
-                    <li>Grâce à notre partenariat avec Amazon, nous vous garantissont la rapidité, la livraison et le retour gratuit, mais comme nous avons choisi Carhartt, nous n'avons pas de retour.</li>
-                    <li>En ce moment, il faut compter 19€ pour un bonnet Carhartt.</li><br>
-                  <p style="text-align:center;"><a href="https://amzn.to/3RhJWuj">Acheter via Amazon</a>.</p>
-                </div>
-                <section class="scroll-section">
-                    <a href="https://amzn.to/3N2sFTg"><img
-                            src="https://m.media-amazon.com/images/I/91tcYRnxxEL._AC_SX679_.jpg"
-                            alt="Carhartt Noel"></a>
-                </section>
-            </div>
-        </div>
-      <div class="intro">
-          <h2>Commentaires client: 4,6 ⭐ / 5</h2><br>
-            <img src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/796567f7-d570-4cf5-9637-d3d6eee034d7._CR0%2C0%2C3000%2C600_SX1920_.jpg"><br>
-            
-            <p>Carhartt c'est aussi des jeans, des vestes et manteaux, des chaussures pour les Femmes et les Hommes.</p>
-            <a target="_blank" href="https://www.amazon.fr/stores/Carhartt/page/A1606391-0726-4D43-A5FD-B62C4D399BCD?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto&_encoding=UTF8&tag=offrenoel06-21&linkCode=ur2&linkId=e4b570bbf40026db7ed1968aea3dbe34&camp=1642&creative=6746"><button class="btn">Visitez</button></a>
-        </div>
-      <div class="avis">
-<section class="scroll-section">
-        <img src="les-exigeants\img\COMMENT1.png" alt="avis" title="Avis client">
-        </section>
-      <section class="scroll-section">
-        <img src="les-exigeants\img\COMMENT2.png" alt="avis" title="Avis client">
-        </section>
-      <section class="scroll-section">
-        <img src="les-exigeants\img\COMMENT3.png" alt="avis" title="Avis client">
-        </section>
-      <section class="scroll-section">
-        <img src="les-exigeants\img\COMMENT4.png" alt="avis" title="Avis client">
-        </section>
-      <section class="scroll-section">
-        <img src="les-exigeants\img\COMMENT5.png" alt="avis" title="Avis client">
-        </section>   
-        </div>
-    </main> 
-    <!--Fork by https://codepen.io/carterfromsl/pen/jOdVZgB -->
-    <div class="check">
-        <div class="uresta-table-wrap">
-            <table class="uresta-table">
-                <thead>
-                    <tr>
-                        <th>Carhartt</th>
-                        <th>Accessoires</th>
-                        <th>Vestes</th>
-                        <th>Chaussures</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><!--<td><span class="x-mark">✗</span></td>-->
-                        <td>Livraison gratuite</td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-                    </tr>
-                    <tr>
-                        <td>Retour gratuit</td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-
-                    </tr>
-                    <tr>
-                        <td>Black friday</td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-                        <td><span class="check-mark">✓</span></td>
-
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <style>
         .uresta-table {
             border-collapse: collapse;
             border-spacing: 0;
@@ -846,83 +665,6 @@
             display: grid;
             margin: 0;
             align-content: center;
-            background-color:black;
-            
-        }
-    </style>
+            background-color: black;
 
-    <div class="intro">
-        <h3>Offre Black Friday</h3>
-        <p>Offre pendant le black friday, livraison gratuite et retour gratuit. On peut
-            difficilement faire mieux. Attention offres limitées.</p>
-        <a href="https://amzn.to/3GfGQ3I"><button class="btn">Explorez</button></a>
-    </div>
-
-    <br>
-    <!---->
-    <script>
-        $(window).on("scroll", function () {
-            $(".scroll-section").each(function () {
-                if (isElementInViewport(this)) {
-                    $(this).addClass("visible");
-                    if ($(this).hasClass("scroll-1")) {
-                        var rect = this.getBoundingClientRect();
-                        if (rect.left <= 0) {
-                            $(this).addClass("scroll-left");
-                        }
-                    } else if ($(this).hasClass("scroll-2")) {
-                        var rect = this.getBoundingClientRect();
-                        if (rect.left <= 0) {
-                            $(this).addClass("scroll-right");
-                        }
-                    } else if ($(this).hasClass("scroll-3")) {
-                        var rect = this.getBoundingClientRect();
-                        if (rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
-                            $(this).addClass("scroll-right");
-                        }
-                    } else if ($(this).hasClass("scroll-4")) {
-                        var rect = this.getBoundingClientRect();
-                        if (rect.top <= 0) {
-                            $(this).addClass("scroll-down");
-                        }
-                    }
-                }
-            });
-        });
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
         }
-    </script>
-</body>
-<footer>
-    <div class="footer-content">
-        <div class="footer-section links">
-            <h3>Bons plans</h3>
-            <ul>
-                <li><a href="https://sell.amazon.fr/programmes/handmade?ref_=asfr_soa_rd&ref=azfrsoafoo&ld=AZFRHNDFooter">Vendez sur Amazon</a></li>
-                <li><a href="https://amzn.to/47PyZpr">Black Friday</a></li>
-                <li><a href="https://amzn.to/3RcjP88">Vente Flash</a></li>
-                <li><a href="https://amzn.to/3RcjP88">amazon.fr/blackfriday</a></li>
-            </ul>
-        </div>
-        <div class="footer-section links">
-            <h3>Pour passer un bon hiver</h3>
-            <ul>
-                <li><a href="https://amzn.to/3QRoT0k">App à raclette</a></li>
-                <li><a href="https://amzn.to/3RgBr2J">Veste Carhartt</a></li>
-                <li><a href="https://amzn.to/3Gncn3C">Timberland</a></li>
-                <li><a href="https://amzn.to/47Os7Zp">Echarpe</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>Tous droits réservés &copy; 2023 | bon plan est un partner <a href="https://amzn.to/47PyZpr">Amazon</a></p>
-    </div>
-</footer>
-</html>
