@@ -46,21 +46,6 @@
             background-blend-mode: overlay;
         }
 
-        body::after {
-            /*       background: url('https://github.com/berru-g/scroll-effect/blob/main/src/img/back.png?raw=true') center/cover;
- */
-            content: "";
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.3;
-            /* Modifier l'opacité ici */
-            pointer-events: none;
-        }
-
         /* Styles pour l'en-tête */
         header {
             display: flex;
@@ -331,7 +316,7 @@
         }
 
         .btn:hover {
-            opacity: .5;
+            opacity: 0.5;
         }
 
         .btn:active {
@@ -480,13 +465,12 @@
         }
 
         a:hover {
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         .ban {
             width: 100%;
-            height:
-                auto;
+            height: auto;
         }
 
         footer {
@@ -560,18 +544,23 @@
             max-width: 600px;
             height: auto;
         }
+      .avis {
+        max-width: 500px;
+        height: auto;
+        justify-content: center;
+      }
     </style>
 </head>
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2LS97LMNE"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCKR71R5NJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-F2LS97LMNE');
+  gtag('config', 'G-FCKR71R5NJ');
 </script>
 
 
@@ -651,8 +640,8 @@
                 <div class="text">
                     <h2>Nos garanties :</h2><br>
                     <li>Grâce à notre partenariat avec Amazon, nous vous garantissont la rapidité, la livraison et le retour gratuit, mais comme nous avons choisi Carhartt, nous n'avons pas de retour.</li>
-                    <li>En ce moment, il faut compter 19€ pour un bonnet Carhartt.</li>
-                  <li><a href="https://amzn.to/3RhJWuj">Acheter via Amazon</a>.</li>
+                    <li>En ce moment, il faut compter 19€ pour un bonnet Carhartt.</li><br>
+                  <p style="text-align:center;"><a href="https://amzn.to/3RhJWuj">Acheter via Amazon</a>.</p>
                 </div>
                 <section class="scroll-section">
                     <a href="https://amzn.to/3N2sFTg"><img
@@ -668,6 +657,7 @@
             <p>Carhartt c'est aussi des jeans, des vestes et manteaux, des chaussures pour les Femmes et les Hommes.</p>
             <a target="_blank" href="https://www.amazon.fr/stores/Carhartt/page/A1606391-0726-4D43-A5FD-B62C4D399BCD?ref_=ast_bln&amp;store_ref=bl_ast_dp_brandLogo_sto&_encoding=UTF8&tag=offrenoel06-21&linkCode=ur2&linkId=e4b570bbf40026db7ed1968aea3dbe34&camp=1642&creative=6746"><button class="btn">Visitez</button></a>
         </div>
+      <div class="avis">
 <section class="scroll-section">
         <img src="https://github.com/berru-g/aff/blob/main/bons-plans/img/COMMENT1.png?raw=true" alt="avis" title="Avis client">
         </section>
@@ -682,7 +672,8 @@
         </section>
       <section class="scroll-section">
         <img src="https://github.com/berru-g/aff/blob/main/bons-plans/img/COMMENT5.png?raw=true" alt="avis" title="Avis client">
-        </section>      
+        </section>   
+        </div>
     </main> 
     <!--Fork by https://codepen.io/carterfromsl/pen/jOdVZgB -->
     <div class="check">
@@ -759,12 +750,12 @@
 
         .uresta-table td:first-of-type {
             background: transparent;
-            color: grey;
+            color: white;
         }
 
         .uresta-table tr:first-of-type td {
             background: transparent;
-            color: grey;
+            color: white;
         }
 
         .uresta-table tr>*:first-of-type {
@@ -772,7 +763,7 @@
         }
 
         .uresta-table tr:not(:first-of-type, :last-of-type) td:first-of-type {
-            border-bottom-color: white;
+            border-bottom-color: transparent;
         }
 
         .uresta-table tr:not(:first-of-type) td:nth-of-type(2) {
@@ -799,7 +790,7 @@
 
         .uresta-table .check-mark::before,
         .uresta-table .check-mark::after {
-            background: grey;
+            background: #05a54b;
             transform: rotate(-45deg);
             top: 0.25em;
             left: 0;
@@ -861,7 +852,7 @@
     </style>
 
     <div class="intro">
-        <h2>Offre Black Friday</h2>
+        <h3>Offre Black Friday</h3>
         <p>Offre pendant le black friday, livraison gratuite et retour gratuit. On peut
             difficilement faire mieux. Attention offres limitées.</p>
         <a href="https://amzn.to/3GfGQ3I"><button class="btn">Explorez</button></a>
