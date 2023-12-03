@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentorat Mensuel</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        width: 100%;
+        height: 400vh;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .page {
+        display: none;
+        padding: 20px 0;
+      }
+      
+      .page h1 {
+        color: #3498db;
+      }
+      
+      .page h2 {
+        color: #333;
+      }
+      
+      .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .cta-button:hover {
+        background-color: #2980b9;
+      }
+      
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <section class="page accroche">
+      <h1>Libérez le potentiel de votre entreprise avec un mentorat mensuel personnalisé</h1>
+      <h2>Dirigez votre entreprise vers le succès en évitant les pièges que j'ai appris à surmonter.</h2>
+    </section>
+
+    <section class="page introduction">
+      <h1>Introduction Personnelle</h1>
+      <h2>Bienvenue ! Je suis [Ton Nom], entrepreneur passionné et créateur de [Nom de ta Marque]. En 2015, j'ai lancé une marque de vêtements qui a connu un succès initial, mais j'ai rapidement réalisé que la gestion quotidienne me détournerait de ma passion créative.</h2>
+      <h2>Cette leçon a été la première de nombreuses expériences qui ont suivi. J'ai ensuite organisé des concerts, mais malheureusement, l'histoire s'est répétée. Cependant, ces échecs m'ont conduit à une révélation cruciale : pour réussir, un entrepreneur doit rester fidèle à son ikigai, à ses compétences et à son domaine d'expertise.</h2>
+    </section>
+
+    <section class="page lecon-apprise">
+      <h1>Leçon Apprise</h1>
+      <h2>Mes erreurs m'ont enseigné que la clé du succès réside dans la concentration sur ce que l'on fait de mieux. En voulant tout gérer, j'ai perdu de vue la créativité et la passion qui ont inspiré mes débuts.</h2>
+      <h2>Je comprends maintenant l'importance de déléguer et de rester dans son domaine d'expertise. C'est la leçon que je souhaite partager avec vous, jeune entrepreneur. Évitez les pièges auxquels j'ai fait face et concentrez-vous sur la croissance de votre entreprise.</h2>
+    </section>
+
+    <section class="page offre">
+      <h1>Offre de Mentorat Mensuel</h1>
+      <h2>Transformez vos défis en opportunités avec mon mentorat mensuel</h2>
+      <h2>Un engagement mensuel pour vous guider dans la croissance de votre entreprise, basé sur mon expérience et mes échecs.</h2>
+      <h2>Imaginez avoir un mentor qui a traversé les hauts et les bas de l'entrepreneuriat. Avec mon service d'abonnement, vous bénéficierez d'un rendez-vous mensuel personnalisé pour discuter de vos défis, recevoir des conseils pratiques et éviter les erreurs courantes.</h2>
+      <h2>Chaque séance sera adaptée à vos besoins spécifiques, basée sur mes expériences concrètes et centrée sur les principes de l'ikigai. Ensemble, nous établirons un plan stratégique pour que vous puissiez rester concentré sur ce que vous faites de mieux tout en faisant prospérer votre entreprise.</h2>
+    </section>
+
+    <section class="page temoignages">
+      <h1>Témoignages</h1>
+      <h2>"Grâce au mentorat de [Ton Nom], j'ai évité les erreurs coûteuses et j'ai pu recentrer mon énergie sur ma passion. Mes résultats parlent d'eux-mêmes."</h2>
+      <h2>"Les conseils pratiques de [Ton Nom] ont été un tournant pour moi. Son approche basée sur l'ikigai m'a aidé à aligner mes actions avec mes véritables compétences."</h2>
+    </section>
+
+    <section class="page action">
+      <h1>Appel à l'Action</h1>
+      <h2>"Prêt à transformer votre entreprise? Rejoignez mon programme d'abonnement aujourd'hui et démarrez votre parcours vers le succès entrepreneurial."</h2>
+      <a href="#" class="cta-button">Rejoindre le Programme</a>
+      <p>Vous avez le choix. La réussite de votre entreprise commence par une décision.</p>
+    </section>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+      
+        function showPage(index) {
+          pages.forEach((page, i) => {
+            if (i === index) {
+              page.style.display = 'block';
+            } else {
+              page.style.display = 'none';
+            }
+          });
+        }
+      
+        function navigateToNextPage() {
+          currentPage++;
+          if (currentPage < pages.length) {
+            showPage(currentPage);
+          }
+        }
+      
+        document.addEventListener('click', function (event) {
+          if (event.target.classList.contains('cta-button')) {
+            event.preventDefault();
+            navigateToNextPage();
+          }
+        });
+      
+        showPage(currentPage);
+      });
+      
+  </script>
+
+</body>
+</html>
