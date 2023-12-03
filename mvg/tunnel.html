@@ -5,41 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentorat Mensuel</title>
   <style>
+    @import url(https://fonts.googleapis.com/css2?family=REM:wght@100;200;400;500;600;700;800&display=swap);
+
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: 'REM', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f0f0f0;
+        background-color: #1a1a1a;         
         width: 100%;
-        height: 400vh;
+        height: auto;
+        color: #fff;
+      }
+      h1 {
+        background: linear-gradient(to right, violet, red);
+      -webkit-background-clip: text;
+      color: transparent;
       }
       
       .container {
         max-width: 800px;
         margin: 0 auto;
-        background-color: #fff;
+        background-color: transparent;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       
-      .page {
-        display: none;
-        padding: 20px 0;
+      section {
+        transform: translateY(50px);
+        transition: opacity 0.5s, transform 0.5s;
       }
-      
-      .page h1 {
-        color: #3498db;
-      }
-      
-      .page h2 {
-        color: #333;
+  
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
       
       .cta-button {
-        display: inline-block;
+        display: flex;
+        margin: 0;
+        justify-content: center;
         padding: 10px 20px;
-        background-color: #3498db;
+        background: linear-gradient(90deg, rgba(166,41,214,1) 18%, rgba(38,61,138,1) 100%);         
         color: #fff;
+        border: 2px solid #fff;
         text-decoration: none;
         font-weight: bold;
         border-radius: 5px;
@@ -47,87 +55,128 @@
       }
       
       .cta-button:hover {
-        background-color: #2980b9;
+        opacity: 0.8;
+        transform: scale(0.99);
       }
       
+      footer {
+        background-color: #f0f0f0;
+        color: #1a1a1a;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .left-links, .right-links {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      a {
+        color: #808080;
+        text-decoration: none;
+        margin-bottom: 10px; /* Ajout d'une marge entre les liens */
+      }
+      .profile-image {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+      }
   </style>
 </head>
+
 <body>
+<br>
+  <a href="#"><img src="tom"
+    alt="mentorat" class="profile-image"></a>
 
   <div class="container">
 
-    <section class="page accroche">
+    <section id="section1" class="section">
       <h1>Libérez le potentiel de votre entreprise avec un mentorat mensuel personnalisé</h1>
-      <h2>Dirigez votre entreprise vers le succès en évitant les pièges que j'ai appris à surmonter.</h2>
+      <p>Dirigez votre entreprise vers le succès en évitant les pièges que j'ai appris à surmonter.</p>
     </section>
 
-    <section class="page introduction">
-      <h1>Introduction Personnelle</h1>
-      <h2>Bienvenue ! Je suis [Ton Nom], entrepreneur passionné et créateur de [Nom de ta Marque]. En 2015, j'ai lancé une marque de vêtements qui a connu un succès initial, mais j'ai rapidement réalisé que la gestion quotidienne me détournerait de ma passion créative.</h2>
-      <h2>Cette leçon a été la première de nombreuses expériences qui ont suivi. J'ai ensuite organisé des concerts, mais malheureusement, l'histoire s'est répétée. Cependant, ces échecs m'ont conduit à une révélation cruciale : pour réussir, un entrepreneur doit rester fidèle à son ikigai, à ses compétences et à son domaine d'expertise.</h2>
+    <section id="section2" class="section">
+      <h2>Introduction Personnelle</h2>
+      <p>Bienvenue ! Je suis Cornélius, entrepreneur passionné et créateur de [Nom de ta Marque]. En 2015, j'ai lancé une marque de vêtements qui a connu un succès initial, mais j'ai rapidement réalisé que la gestion quotidienne me détournerait de ma passion créative.</p>
+      <p>Cette leçon a été la première de nombreuses expériences qui ont suivi. J'ai ensuite organisé des concerts, mais malheureusement, l'histoire s'est répétée. Cependant, ces échecs m'ont conduit à une révélation cruciale : pour réussir, un entrepreneur doit rester fidèle à son ikigai, à ses compétences et à son domaine d'expertise.</p>
     </section>
 
-    <section class="page lecon-apprise">
-      <h1>Leçon Apprise</h1>
-      <h2>Mes erreurs m'ont enseigné que la clé du succès réside dans la concentration sur ce que l'on fait de mieux. En voulant tout gérer, j'ai perdu de vue la créativité et la passion qui ont inspiré mes débuts.</h2>
-      <h2>Je comprends maintenant l'importance de déléguer et de rester dans son domaine d'expertise. C'est la leçon que je souhaite partager avec vous, jeune entrepreneur. Évitez les pièges auxquels j'ai fait face et concentrez-vous sur la croissance de votre entreprise.</h2>
+    <section id="section3" class="section">
+      <h2>Leçon Apprise</h2>
+      <p>Mes erreurs m'ont enseigné que la clé du succès réside dans la concentration sur ce que l'on fait de mieux. En voulant tout gérer, j'ai perdu de vue la créativité et la passion qui ont inspiré mes débuts.</p>
+      <p>Je comprends maintenant l'importance de déléguer et de rester dans son domaine d'expertise. C'est la leçon que je souhaite partager avec vous, jeune entrepreneur. Évitez les pièges auxquels j'ai fait face et concentrez-vous sur la croissance de votre entreprise.</p>
     </section>
 
-    <section class="page offre">
-      <h1>Offre de Mentorat Mensuel</h1>
-      <h2>Transformez vos défis en opportunités avec mon mentorat mensuel</h2>
-      <h2>Un engagement mensuel pour vous guider dans la croissance de votre entreprise, basé sur mon expérience et mes échecs.</h2>
-      <h2>Imaginez avoir un mentor qui a traversé les hauts et les bas de l'entrepreneuriat. Avec mon service d'abonnement, vous bénéficierez d'un rendez-vous mensuel personnalisé pour discuter de vos défis, recevoir des conseils pratiques et éviter les erreurs courantes.</h2>
-      <h2>Chaque séance sera adaptée à vos besoins spécifiques, basée sur mes expériences concrètes et centrée sur les principes de l'ikigai. Ensemble, nous établirons un plan stratégique pour que vous puissiez rester concentré sur ce que vous faites de mieux tout en faisant prospérer votre entreprise.</h2>
+    <section id="section4" class="section">
+      <p>Transformez vos défis en opportunités avec mon mentorat mensuel</p>
+      <p>Un engagement mensuel pour vous guider dans la croissance de votre entreprise, basé sur mon expérience et mes échecs.</p>
+      <p>Imaginez avoir un mentor qui a traversé les hauts et les bas de l'entrepreneuriat. Avec mon service d'abonnement, vous bénéficierez d'un rendez-vous mensuel personnalisé pour discuter de vos défis, recevoir des conseils pratiques et éviter les erreurs courantes.</p>
+      <p>Chaque séance sera adaptée à vos besoins spécifiques, basée sur mes expériences concrètes et centrée sur les principes de l'ikigai. Ensemble, nous établirons un plan stratégique pour que vous puissiez rester concentré sur ce que vous faites de mieux tout en faisant prospérer votre entreprise.</p>
     </section>
 
-    <section class="page temoignages">
-      <h1>Témoignages</h1>
-      <h2>"Grâce au mentorat de [Ton Nom], j'ai évité les erreurs coûteuses et j'ai pu recentrer mon énergie sur ma passion. Mes résultats parlent d'eux-mêmes."</h2>
-      <h2>"Les conseils pratiques de [Ton Nom] ont été un tournant pour moi. Son approche basée sur l'ikigai m'a aidé à aligner mes actions avec mes véritables compétences."</h2>
+    <section id="section5" class="section">
+      <img src="https://thispersondoesnotexist.com/"
+    alt="mentorat" class="profile-image">
+      <p>"Grâce au mentorat de Cornélius, j'ai évité les erreurs coûteuses et j'ai pu recentrer mon énergie sur ma passion. Mes résultats parlent d'eux-mêmes."</p>
+      <img src="https://thispersondoesnotexist.com/"
+    alt="mentorat" class="profile-image">
+      <p>"Les conseils pratiques de Cornélius ont été un tournant pour moi. Son approche basée sur l'ikigai m'a aidé à aligner mes actions avec mes véritables compétences."</p>
     </section>
 
     <section class="page action">
-      <h1>Appel à l'Action</h1>
-      <h2>"Prêt à transformer votre entreprise? Rejoignez mon programme d'abonnement aujourd'hui et démarrez votre parcours vers le succès entrepreneurial."</h2>
+      <p>"Prêt à transformer votre entreprise? Rejoignez mon programme d'abonnement aujourd'hui et démarrez votre parcours vers le succès entrepreneurial."</p>
       <a href="#" class="cta-button">Rejoindre le Programme</a>
       <p>Vous avez le choix. La réussite de votre entreprise commence par une décision.</p>
     </section>
-
-  </div>
+  </div> 
+<br>
+<br>
+  <footer>
+    <div class="left-column">
+      <div class="left-links">
+        <h2>Réseaux:</h2>
+        <a href="https://www.bonzai.lol">Bonzai.lol</a>
+        <a href="https://t.me/yourtelegramchannel">Telegram</a>
+        <a href="https://www.yourmvgpage.com">MVG</a>
+      </div>
+    </div>
+  
+    <div class="right-column">
+      <div class="right-links">
+        <h2>Tool's:</h2>
+        <a href="https://www.ikigai-tool.com">Ikigai</a>
+        <a href="https://www.archetype-tool.com">Archétype</a>
+        <a href="https://www.metaprogramme-tool.com">Meta-programme</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const pages = document.querySelectorAll('.page');
-        let currentPage = 0;
-      
-        function showPage(index) {
-          pages.forEach((page, i) => {
-            if (i === index) {
-              page.style.display = 'block';
-            } else {
-              page.style.display = 'none';
-            }
-          });
-        }
-      
-        function navigateToNextPage() {
-          currentPage++;
-          if (currentPage < pages.length) {
-            showPage(currentPage);
-          }
-        }
-      
-        document.addEventListener('click', function (event) {
-          if (event.target.classList.contains('cta-button')) {
-            event.preventDefault();
-            navigateToNextPage();
+    document.addEventListener("DOMContentLoaded", function() {
+      var sections = document.querySelectorAll('.section');
+  
+      function checkVisibility() {
+        sections.forEach(function(section) {
+          var position = section.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+  
+          if (position < windowHeight * 0.75) {
+            section.classList.add('visible');
           }
         });
-      
-        showPage(currentPage);
+      }
+  
+      checkVisibility();
+  
+      window.addEventListener('scroll', function() {
+        checkVisibility();
       });
-      
+    });
   </script>
 
 </body>
