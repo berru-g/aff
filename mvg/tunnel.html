@@ -16,7 +16,7 @@
         height: auto;
         color: #fff;
       }
-      h1 {
+      h1, h2 {
         background: linear-gradient(to right, violet, red);
       -webkit-background-clip: text;
       color: transparent;
@@ -90,7 +90,7 @@
 
 <body>
 <br>
-  <a href="#"><img src="tom"
+  <a href="#"><img src="https://github.com/berru-g/aff/blob/main/mvg/tom-lonzo.jpg?raw=true"
     alt="mentorat" class="profile-image"></a>
 
   <div class="container">
@@ -113,23 +113,29 @@
     </section>
 
     <section id="section4" class="section">
+      <h2>Toute période de crise à son lot d'opportunité</h2>
       <p>Transformez vos défis en opportunités avec mon mentorat mensuel</p>
       <p>Un engagement mensuel pour vous guider dans la croissance de votre entreprise, basé sur mon expérience et mes échecs.</p>
       <p>Imaginez avoir un mentor qui a traversé les hauts et les bas de l'entrepreneuriat. Avec mon service d'abonnement, vous bénéficierez d'un rendez-vous mensuel personnalisé pour discuter de vos défis, recevoir des conseils pratiques et éviter les erreurs courantes.</p>
       <p>Chaque séance sera adaptée à vos besoins spécifiques, basée sur mes expériences concrètes et centrée sur les principes de l'ikigai. Ensemble, nous établirons un plan stratégique pour que vous puissiez rester concentré sur ce que vous faites de mieux tout en faisant prospérer votre entreprise.</p>
     </section>
-
+<br>
+<h2>Retours de nos mentorés</h2>
     <section id="section5" class="section">
-      <img src="https://thispersondoesnotexist.com/"
-    alt="mentorat" class="profile-image">
+      <img src="https://thispersondoesnotexist.com/1"
+    alt="Tom Lonzo" class="profile-image">
       <p>"Grâce au mentorat de Cornélius, j'ai évité les erreurs coûteuses et j'ai pu recentrer mon énergie sur ma passion. Mes résultats parlent d'eux-mêmes."</p>
+    </section>
+    <br>
+    <section id="section6" class="section"></section>
       <img src="https://thispersondoesnotexist.com/"
     alt="mentorat" class="profile-image">
       <p>"Les conseils pratiques de Cornélius ont été un tournant pour moi. Son approche basée sur l'ikigai m'a aidé à aligner mes actions avec mes véritables compétences."</p>
     </section>
-
-    <section class="page action">
-      <p>"Prêt à transformer votre entreprise? Rejoignez mon programme d'abonnement aujourd'hui et démarrez votre parcours vers le succès entrepreneurial."</p>
+<br>
+<br>
+    <section id="section7" class="section">
+      <p>Prêt à transformer votre entreprise? Rejoignez mon programme d'abonnement aujourd'hui et démarrez votre parcours vers le succès entrepreneurial.</p>
       <a href="#" class="cta-button">Rejoindre le Programme</a>
       <p>Vous avez le choix. La réussite de votre entreprise commence par une décision.</p>
     </section>
@@ -165,7 +171,7 @@
           var position = section.getBoundingClientRect().top;
           var windowHeight = window.innerHeight;
   
-          if (position < windowHeight * 0.75) {
+          if (position < windowHeight * 1.2) {
             section.classList.add('visible');
           }
         });
