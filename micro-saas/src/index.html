@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Vente Directe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <h1>Vente Directe</h1>
+        <div id="cart">
+            <h2>Panier</h2>
+            <p>Total: <span id="total-price">0</span> €</p>
+            <button id="checkout-button" onclick="openCheckoutForm()" style="display:none;">Procéder au paiement</button>
+        </div>
+    </header>
+    <div id="intro">
+        <h2>Bienvenue sur notre site de vente directe</h2>
+        <p>Profitez des produits de qualité à des prix raisonnables grâce à notre plateforme sans intermédiaire.</p>
+    </div>
+    <main>
+        <h2>Articles en vente</h2>
+        <div id="product-list">
+            <!-- Les produits seront insérés ici par JavaScript -->
+        </div>
+    </main>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckoutForm()">&times;</span>
+            <h2>Formulaire de paiement</h2>
+            <form id="checkout-form" onsubmit="submitForm(event)">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Adresse e-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+                <div id="card-element">
+                    <!-- Elements will create input elements here -->
+                </div>
+                <button type="submit">Payer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section links">
+            <h3>Info</h3>
+            <ul>
+                <li><a href="#">F.A.Q</a></li>
+                <li><a href="#">S.A.V</a></li>
+                <li><a href="#">Délais de livraison</a></li>
+                <li><a href="#">Sécurité de vos données</a></li>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h3>Fonctionnement</h3>
+            <ul>
+                <li><a href="#">Nos fournisseurs</a></li>
+                <li><a href="#">Frais de douane</a></li>
+                <li><a href="#">Suivi colis</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Tous droits réservés &copy; 2023 | les exigeants</p>
+    </div>
+</footer>
+</html>
+
+
+
+<!-- old version non secur
+<body>
+    <header>
+        <h1>Vente Directe</h1>
+        <div id="cart">
+            <h2>Panier</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: <span id="total-price">0</span> €</p>
+            <button id="checkout-button" onclick="openCheckoutForm()" style="display:none;">Procéder au paiement</button>
+        </div>
+    </header>
+    <div id="intro">
+        <h2>Bienvenue sur notre site de vente directe</h2>
+        <p>Profitez des produits de qualité à des prix raisonnables grâce à notre plateforme de vente directe.</p>
+    </div>
+    <main>
+        <h2>Articles en vente</h2>
+        <div id="product-list">
+            
+        </div>
+    </main>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckoutForm()">&times;</span>
+            <h2>Formulaire de paiement</h2>
+            <form id="checkout-form" onsubmit="submitForm(event)">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Adresse e-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="card-number">Numéro de carte:</label>
+                <input type="text" id="card-number" name="card-number" required><br>
+                <label for="expiry-date">Date d'expiration:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required><br>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required><br>
+                <button type="submit">Payer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+-->
