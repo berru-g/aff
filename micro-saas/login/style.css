@@ -140,9 +140,18 @@ button:hover {
     }
 }
 
+#user-auth {
+    display: flex;
+    position: center;
+    width: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+}
+
  footer {
-            background-color: #1a1a1a;
-            color: #808080;
+            background-color: #007bff;
+            color: #fff;
             padding: 10px 5px;
         }
 
@@ -164,7 +173,7 @@ button:hover {
         .footer-section p,
         .footer-section ul,
         .footer-section a {
-            color: #808080;
+            color: #ccc;
             text-decoration: none;
             font-size: 14px;
         }
@@ -192,7 +201,7 @@ button:hover {
         }
 
         .footer-bottom {
-            background-color: #1a1a1a;
+            background-color: #007bff;
             padding: 0px 0;
             text-align: center;
         }

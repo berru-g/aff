@@ -13,11 +13,7 @@
 <body>
     <header>
         <h1>Vente Directe</h1>
-        <div id="user-auth">
-            <button id="login-button" onclick="showLoginForm()">Se connecter</button>
-            <button id="signup-button" onclick="showSignupForm()">S'inscrire</button>
-            <button id="logout-button" style="display:none;" onclick="logout()">Se déconnecter</button>
-        </div>
+        
         <div id="cart">
             <h2>Panier</h2>
             <p>Total: <span id="total-price">0</span> €</p>
@@ -84,4 +80,35 @@
 
     <script src="script.js"></script>
 </body>
+<footer>
+    
+<div id="user-auth">
+    <button id="login-button" onclick="showLoginForm()">Se connecter</button>
+    <button id="signup-button" onclick="showSignupForm()">S'inscrire</button>
+    <button id="logout-button" style="display:none;" onclick="logout()">Se déconnecter</button>
+</div>
+
+    <div class="footer-content">
+        <div class="footer-section links">
+            <h3>Info</h3>
+            <ul>
+                <li><a href="#">F.A.Q</a></li>
+                <li><a href="#">S.A.V</a></li>
+                <li><a href="#">Délais de livraison</a></li>
+                <li><a href="#">Sécurité de vos données</a></li>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h3>Fonctionnement</h3>
+            <ul>
+                <li><a href="#">Nos fournisseurs</a></li>
+                <li><a href="#">Frais de douane</a></li>
+                <li><a href="#">Suivi colis</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Tous droits réservés &copy; 2023 | les exigeants</p>
+    </div>
+</footer>
 </html>

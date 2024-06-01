@@ -1,145 +1,92 @@
-// script.js
-const products = [
-    {
-        id: 1,
-        name: "Produit 1",
-        price: 25,
-        description: "Description du produit 1",
-        image: "https://via.placeholder.com/150"
-    },
-    {
-        id: 2,
-        name: "Produit 2",
-        price: 30,
-        description: "Description du produit 2",
-        image: "https://via.placeholder.com/150"
-    },
-    {
-        id: 3,
-        name: "Produit 3",
-        price: 45,
-        description: "Description du produit 3",
-        image: "https://via.placeholder.com/150"
-    },
-  {
-        id: 4,
-        name: "Produit 4",
-        price: 65,
-        description: "Description du produit 1",
-        image: "https://via.placeholder.com/150"
-    },
-  {
-        id: 5,
-        name: "Produit 5",
-        price: 85,
-        description: "Description du produit 1",
-        image: "https://via.placeholder.com/150"
-    },
-  {
-        id: 6,
-        name: "Produit 6",
-        price: 125,
-        description: "Description du produit 1",
-        image: "https://via.placeholder.com/150"
-    }
-];
 
-const productContainer = document.getElementById('product-list');
-const totalPriceElement = document.getElementById('total-price');
-const checkoutButton = document.getElementById('checkout-button');
-const checkoutModal = document.getElementById('checkout-modal');
-let totalPrice = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const products = [
+        { id: 1, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
+        { id: 2, name: 'Produit 2', description: 'Description du produit 2', price: 30, image: 'https://via.placeholder.com/150' },
+        { id: 3, name: 'Produit 3', description: 'Description du produit 3', price: 40, image: 'https://via.placeholder.com/150' },
+      { id: 4, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
+      { id: 5, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
+      { id: 6, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' }
+      
+    ];
 
-const stripe = Stripe('votre-publiable-key');
-const elements = stripe.elements();
-const cardElement = elements.create('card');
+    const productContainer = document.getElementById('product-container');
+    const cart = document.getElementById('cart');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutModal = document.getElementById('checkout-modal');
+    let cartItems = [];
 
-function renderProducts() {
     products.forEach(product => {
         const productElement = document.createElement('div');
-        productElement.className = 'product';
+        productElement.classList.add('product');
         productElement.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
+            <h2>${product.name}</h2>
             <p>${product.description}</p>
-            <p>Prix: ${product.price} €</p>
+            <p>${product.price}€</p>
             <button onclick="addToCart(${product.id})">Ajouter au panier</button>
         `;
         productContainer.appendChild(productElement);
     });
-}
 
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    totalPrice += product.price;
-    totalPriceElement.textContent = totalPrice;
-    checkoutButton.style.display = 'block';
-}
+    window.addToCart = function(id) {
+        const product = products.find(p => p.id === id);
+        cartItems.push(product);
+        updateCart();
+    };
 
-function openCheckoutForm() {
-    checkoutModal.style.display = 'block';
-    cardElement.mount('#card-element');
-}
+    function updateCart() {
+        const total = cartItems.reduce((sum, product) => sum + product.price, 0);
+        cartTotal.textContent = `${total}€`;
+    }
 
-function closeCheckoutForm() {
-    checkoutModal.style.display = 'none';
-}
+    cart.addEventListener('click', function() {
+        checkoutModal.style.display = 'flex';
+    });
 
-function submitForm(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    stripe.createToken(cardElement).then(result => {
-        if (result.error) {
-            Swal.fire({
-                title: 'Erreur',
-                text: result.error.message,
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
-        } else {
-            fetch('https://votre-serveur.com/api/paiement', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    token: result.token.id,
-                    totalPrice
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    Swal.fire({
-                        title: 'Merci pour votre confiance!',
-                        text: 'Votre paiement a été effectué avec succès. Délai de livraison : 1 mois.',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    });
-                    closeCheckoutForm();
-                } else {
-                    throw new Error('Erreur lors de l\'envoi des données');
-                }
-            })
-            .catch(error => {
-                Swal.fire({
-                    title: 'Erreur',
-                    text: 'Une erreur est survenue lors de l\'envoi des données. Veuillez réessayer.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
-                });
-            });
+    checkoutModal.addEventListener('click', function(event) {
+        if (event.target === checkoutModal) {
+            checkoutModal.style.display = 'none';
         }
     });
-}
 
-window.onclick = function(event) {
-    if (event.target == checkoutModal) {
+    document.getElementById('checkout-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Envoyer les données à votre serveur et gérer la réponse
+        Swal.fire({
+            title: 'Merci pour votre achat!',
+            text: 'Votre commande sera livrée dans un mois.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
         checkoutModal.style.display = 'none';
-    }
-}
+    });
 
-renderProducts();
+    function closeLoginForm() {
+        document.getElementById('loginModal').style.display = 'none';
+    }
+
+    function closeSignupForm() {
+        document.getElementById('signupModal').style.display = 'none';
+    }
+});
+
+  
+
+// MENU via lib sweetalert2
+const FAQ = document.querySelector('.faq');
+
+FAQ.addEventListener('click', () => {
+  // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
+  Swal.fire({
+    title: 'F.A.Q',
+    html: '<ul><li><b>Quand le produit est il livré?</b></li><p>Environ un mois apres la commande.</p><li><b>Pourquoi c\'est si long?</b></li><p>Car votre produit par de l\'usine de fabrication directement et que nous gérons les frais de douanes et le transport.</p><li><b>Puis-je annuler ma commande?</b></li><p>Oui jusqu\'a 24H aprés le paiment.</p></ul>',
+    showCloseButton: true,
+    showConfirmButton: true,
+    customClass: {
+      popup: 'custom-swal-popup',
+      closeButton: 'custom-swal-close-button',
+      content: 'custom-swal-content',
+    }
+  });
+});
