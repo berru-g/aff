@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             total: cartTotal.textContent
         };
 
-        fetch('https://github.com/berru-g/aff/tree/main/micro-saas', {
+        fetch('https://github.com/berru-g/aff/tree/main/micro-saas/payment-server/log.json', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
