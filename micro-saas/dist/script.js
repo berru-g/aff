@@ -1,13 +1,11 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const products = [
         { id: 1, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
         { id: 2, name: 'Produit 2', description: 'Description du produit 2', price: 30, image: 'https://via.placeholder.com/150' },
         { id: 3, name: 'Produit 3', description: 'Description du produit 3', price: 40, image: 'https://via.placeholder.com/150' },
-      { id: 4, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
-      { id: 5, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
-      { id: 6, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' }
-      
+        { id: 4, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
+        { id: 5, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' },
+        { id: 6, name: 'RASPBERRY PI 3B+', description: '4 x 1,4 GHz, 1 Go RAM, WiFi, BT', price: 20, image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-reichelt.de%2Fbilder%2Fweb%2Fxxl_ws%2FA300%2FRASPBERRY_PI_3B_PLUS_001.png' }
     ];
 
     const productContainer = document.getElementById('product-container');
@@ -52,14 +50,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        // Envoyer les données à votre serveur et gérer la réponse
-        Swal.fire({
-            title: 'Merci pour votre achat!',
-            text: 'Votre commande sera livrée dans un mois.',
-            icon: 'success',
-            confirmButtonText: 'OK'
+        const formData = new FormData(event.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            cardNumber: formData.get('card-number'),
+            expiration: formData.get('expiration'),
+            cvv: formData.get('cvv'),
+            total: cartTotal.textContent
+        };
+
+        fetch('https://github.com/berru-g/aff/tree/main/micro-saas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                Swal.fire({
+                    title: 'Merci pour votre achat!',
+                    text: 'Votre commande sera livrée dans un mois.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                cartItems = [];
+                updateCart();
+                checkoutModal.style.display = 'none';
+            } else {
+                return response.json().then(error => {
+                    Swal.fire({
+                        title: 'Erreur',
+                        text: `Quelque chose s'est mal passé: ${error.message}`,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                });
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'Erreur',
+                text: `Quelque chose s'est mal passé: ${error.message}`,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         });
-        checkoutModal.style.display = 'none';
     });
 
     function closeLoginForm() {
@@ -71,22 +108,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-  
-
 // MENU via lib sweetalert2
 const FAQ = document.querySelector('.faq');
 
 FAQ.addEventListener('click', () => {
-  // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
-  Swal.fire({
-    title: 'F.A.Q',
-    html: '<ul><li><b>Quand le produit est il livré?</b></li><p>Environ un mois apres la commande.</p><li><b>Pourquoi c\'est si long?</b></li><p>Car votre produit par de l\'usine de fabrication directement et que nous gérons les frais de douanes et le transport.</p><li><b>Puis-je annuler ma commande?</b></li><p>Oui jusqu\'a 24H aprés le paiment.</p></ul>',
-    showCloseButton: true,
-    showConfirmButton: true,
-    customClass: {
-      popup: 'custom-swal-popup',
-      closeButton: 'custom-swal-close-button',
-      content: 'custom-swal-content',
-    }
-  });
+    // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
+    Swal.fire({
+        title: 'F.A.Q',
+        html: '<ul><li><b>Quand le produit est-il livré?</b></li><p>Environ un mois après la commande.</p><li><b>Pourquoi c\'est si long?</b></li><p>Car votre produit part de l\'usine de fabrication directement et que nous gérons les frais de douanes et le transport.</p><li><b>Puis-je annuler ma commande?</b></li><p>Oui jusqu\'à 24H après le paiement.</p></ul>',
+        showCloseButton: true,
+        showConfirmButton: true,
+        customClass: {
+            popup: 'custom-swal-popup',
+            closeButton: 'custom-swal-close-button',
+            content: 'custom-swal-content',
+        }
+    });
 });
