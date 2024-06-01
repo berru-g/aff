@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Vente Directe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Vente Directe</h1>
+        <div id="user-auth">
+            <button id="login-button" onclick="showLoginForm()">Se connecter</button>
+            <button id="signup-button" onclick="showSignupForm()">S'inscrire</button>
+            <button id="logout-button" style="display:none;" onclick="logout()">Se déconnecter</button>
+        </div>
+        <div id="cart">
+            <h2>Panier</h2>
+            <p>Total: <span id="total-price">0</span> €</p>
+            <button id="checkout-button" onclick="openCheckoutForm()" style="display:none;">Procéder au paiement</button>
+        </div>
+    </header>
+    <div id="intro">
+        <h2>Bienvenue sur notre site de vente directe</h2>
+        <p>Profitez des produits de qualité à des prix raisonnables grâce à notre plateforme de vente directe.</p>
+    </div>
+    <main>
+        <h2>Articles en vente</h2>
+        <div id="product-list">
+            <!-- Les produits seront insérés ici par JavaScript -->
+        </div>
+    </main>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckoutForm()">&times;</span>
+            <h2>Formulaire de paiement</h2>
+            <form id="checkout-form" onsubmit="submitForm(event)">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Adresse e-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+                <div id="card-element">
+                    <!-- Elements will create input elements here -->
+                </div>
+                <button type="submit">Payer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Connexion</h2>
+            <form id="login-form" onsubmit="login(event)">
+                <label for="login-email">Adresse e-mail:</label>
+                <input type="email" id="login-email" name="login-email" required><br>
+                <label for="login-password">Mot de passe:</label>
+                <input type="password" id="login-password" name="login-password" required><br>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulaire d'inscription -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupForm()">&times;</span>
+            <h2>Inscription</h2>
+            <form id="signup-form" onsubmit="signup(event)">
+                <label for="signup-email">Adresse e-mail:</label>
+                <input type="email" id="signup-email" name="signup-email" required><br>
+                <label for="signup-password">Mot de passe:</label>
+                <input type="password" id="signup-password" name="signup-password" required><br>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
