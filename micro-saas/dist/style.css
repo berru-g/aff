@@ -42,6 +42,67 @@ header {
     color: #666;
 }
 
+.product-reviews {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.product-reviews h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.product-reviews form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-reviews form label {
+    margin-bottom: 5px;
+}
+
+.product-reviews form input,
+.product-reviews form textarea,
+.product-reviews form select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-reviews form button {
+    align-self: flex-start;
+}
+
+#reviews-container {
+    margin-bottom: 20px;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h4 {
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.review p {
+    margin-bottom: 5px;
+}
+
+.review .rating {
+    color: #ffcc00;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;

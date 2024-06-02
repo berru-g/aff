@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://example.com">
     <meta property="og:type" content="website">
     <title>les exigeants Vente Directe - Produits de Haute Qualité à Prix Abordables</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -29,6 +29,9 @@
         <p>Obtenez des articles de qualité à des prix raisonnables grâce à peut d'intermédiaire.</p><br>
       <p>Les prix affichés sont compris avec les frais de livraison et frais de douane. Le délai de livraison est de 1 mois en moyenne.</p>
     </div>
+  
+  
+
     <div class="products" id="product-container">
         <!-- Les produits seront injectés ici via JavaScript -->
     </div>
@@ -79,6 +82,27 @@
             </form>
         </div>
     </div>
+  
+  <div class="product-reviews" id="product-reviews">
+    <h3>Avis des clients</h3>
+    <div id="reviews-container"></div>
+    <h3>Ajouter un avis</h3>
+    <form id="review-form">
+        <label for="reviewer-name">Votre nom:</label>
+        <input type="text" id="reviewer-name" name="reviewer-name" required>
+        <label for="review-text">Votre avis:</label>
+        <textarea id="review-text" name="review-text" rows="4" required></textarea>
+        <label for="review-rating">Évaluation:</label>
+        <select id="review-rating" name="review-rating" required>
+            <option value="5">5 étoiles</option>
+            <option value="4">4 étoiles</option>
+            <option value="3">3 étoiles</option>
+            <option value="2">2 étoiles</option>
+            <option value="1">1 étoile</option>
+        </select>
+        <button type="submit">Soumettre</button>
+    </form>
+</div>
     <footer>
         <div id="google-signin-btn"></div>
         <div class="footer-content">

@@ -157,6 +157,100 @@ function renderButton() {
         'onsuccess': onSignIn
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewForm = document.getElementById('review-form');
+    const reviewsContainer = document.getElementById('reviews-container');
+
+    const reviews = [];
+
+    reviewForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('reviewer-name').value;
+        const text = document.getElementById('review-text').value;
+        const rating = document.getElementById('review-rating').value;
+
+        const review = { name, text, rating };
+        reviews.push(review);
+
+        displayReviews();
+
+        reviewForm.reset();
+    });
+
+    function displayReviews() {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = `
+                <h4>${review.name}</h4>
+                <p class="rating">${'★'.repeat(review.rating)}</p>
+                <p>${review.text}</p>
+            `;
+            reviewsContainer.appendChild(reviewElement);
+        });
+    }
+});
+/*document.addEventListener('DOMContentLoaded', function() {
+    const reviewForm = document.getElementById('review-form');
+    const reviewsContainer = document.getElementById('reviews-container');
+    const productId = 1; // ID du produit, à adapter en fonction du produit affiché
+
+    function fetchReviews() {
+        fetch(`reviews.php?product_id=${productId}`)
+            .then(response => response.json())
+            .then(reviews => {
+                displayReviews(reviews);
+            });
+    }
+
+    reviewForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('reviewer-name').value;
+        const text = document.getElementById('review-text').value;
+        const rating = document.getElementById('review-rating').value;
+
+        const review = {
+            product_id: productId,
+            reviewer_name: name,
+            review_text: text,
+            rating: parseInt(rating)
+        };
+
+        fetch('reviews.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                fetchReviews();
+                reviewForm.reset();
+            }
+        });
+    });
+
+    function displayReviews(reviews) {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = `
+                <h4>${review.reviewer_name}</h4>
+                <p class="rating">${'★'.repeat(review.rating)}</p>
+                <p>${review.review_text}</p>
+            `;
+            reviewsContainer.appendChild(reviewElement);
+        });
+    }
+
+    fetchReviews();
+});
+
+*/
 
 /*
 SEO (Search Engine Optimization)
