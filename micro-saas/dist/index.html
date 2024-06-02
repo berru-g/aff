@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Achetez des produits de haute qualité à des prix raisonnables directement sans intermédiaire. Découvrez nos offres exclusives.">
     <meta name="keywords" content="vente directe, produits abordables, haute qualité, achats en ligne, sans intermediaire">
@@ -10,20 +10,24 @@
     <meta property="og:image" content="https://example.com/image.jpg">
     <meta property="og:url" content="https://example.com">
     <meta property="og:type" content="website">
-    <title>Vente Directe - Produits de Haute Qualité à Prix Abordables</title>
-    <link rel="stylesheet" href="style.css">
+    <title>les exigeants Vente Directe - Produits de Haute Qualité à Prix Abordables</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
     <header>
-        Vente Directe
+        <h1>les exigeants</h1>
     </header>
     <div class="intro">
-        <h1>Bienvenue sur Vente Directe</h1>
-        <p>Obtenez des articles de qualité à des prix raisonnables sans intermédiaire.</p>
+        <h1>Bienvenue sur notre site de Vente Directe</h1>
+        <p>Obtenez des articles de qualité à des prix raisonnables grâce à peut d'intermédiaire.</p><br>
+      <p>Les prix affichés sont compris avec les frais de livraison et frais de douane. Le délai de livraison est de 1 mois en moyenne.</p>
     </div>
     <div class="products" id="product-container">
         <!-- Les produits seront injectés ici via JavaScript -->
@@ -75,47 +79,41 @@
             </form>
         </div>
     </div>
-
+    <footer>
+        <div id="google-signin-btn"></div>
+        <div class="footer-content">
+            <div class="footer-section links">
+                <h3>Info</h3>
+                <ul>
+                    <li class="faq"><a href="#">F.A.Q</a></li>
+                    <li><a href="#">S.A.V</a></li>
+                    <li><a href="#">Délais de livraison</a></li>
+                    <li><a href="#">Sécurité de vos données</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h3>Fonctionnement</h3>
+                <ul>
+                    <li><a href="#">Nos fournisseurs</a></li>
+                    <li><a href="#">News letters</a></li>
+                    <li><a href="#">Suivi colis</a></li>
+                </ul>
+            </div>
+        </div>
+        <form class="formulaire" action="https://formspree.io/f/xdoqreqd" method="POST">
+            <label>
+                Ecrivez nous :
+                <input type="email" name="email" placeholder="email">
+            </label>
+            <label>
+                <textarea name="message" placeholder="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+        <div class="footer-bottom">
+            <p>Tous droits réservés &copy; 2023 | les exigeants</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
-  <footer>
-    <div class="footer-content">
-        <div class="footer-section links">
-            <h3>Info</h3>
-            <ul>
-                <li class="faq"><a href="#">F.A.Q</a></li>
-                <li><a href="#">S.A.V</a></li>
-                <li><a href="#">Délais de livraison</a></li>
-                <li><a href="#">Sécurité de vos données</a></li>
-            </ul>
-        </div>
-        <div class="footer-section links">
-            <h3>Fonctionnement</h3>
-            <ul>
-                <li><a href="#">Nos fournisseurs</a></li>
-                <li><a href="#">News letters</a></li>
-                <li><a href="#">Suivi colis</a></li>
-            </ul>
-        </div>
-    </div>
-    <!--https://formspree.io/-->
-    <form
-    action="https://formspree.io/f/xdoqreqd"
-    method="POST"
-  >
-    <label>
-      Your email:
-      <input type="email" name="email">
-    </label>
-    <label>
-      Your message:
-      <textarea name="message"></textarea>
-    </label>
-    <!-- your other form fields go here -->
-    <button type="submit">Send</button>
-  </form>
-    <div class="footer-bottom">
-        <p>Tous droits réservés &copy; 2023 | les exigeants</p>
-    </div>
-</footer>
 </html>
