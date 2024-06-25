@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+/*
 document.addEventListener('DOMContentLoaded', function() {
   if (/Mobi|Android/i.test(navigator.userAgent)) {
       // Désactiver l'effet parallax pour les appareils mobiles
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', function() {
       rellax.destroy(); // Désactiver Rellax sur mobile
   }
 });
+*/
