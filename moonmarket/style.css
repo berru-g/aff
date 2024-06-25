@@ -256,9 +256,30 @@ a:hover {
 .gallery a:hover img {
   transform: scale(1.1);
 }
+/*if paralax norun android
+.parallax {
+  position: relative;
+  background-image: url('your-image.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: parallaxScroll 10s infinite linear;
+}
+
+@keyframes parallaxScroll {
+  from {
+      background-position: 0% 0%;
+  }
+  to {
+      background-position: 0% 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .parallax {
       background-attachment: scroll;
   }
 }
+*/
