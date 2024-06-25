@@ -256,3 +256,9 @@ a:hover {
 .gallery a:hover img {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .parallax {
+      background-attachment: scroll;
+  }
+}
