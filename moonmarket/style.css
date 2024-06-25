@@ -91,7 +91,7 @@ body {
   position: relative;
   color: white;
   top: -30px;
-  /* height: 100vh; */
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,8 +172,8 @@ body {
 }
 .cta {
   position: relative;
-  padding 20px 20;
-  left: 45%;
+  padding: 20px 20;
+  left: 30%;
   margin-bottom: 50px;
 }
 button {
@@ -213,7 +213,7 @@ button:active {
 
     .footer-columns {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       max-width: 1000px;
       margin: 10 auto;
     }
