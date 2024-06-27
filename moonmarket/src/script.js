@@ -83,3 +83,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Désactiver l'effet parallax pour les appareils mobiles
+      document.querySelectorAll('.parallax').forEach(function(el) {
+          el.style.backgroundAttachment = 'scroll';
+      });
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const rellax = new Rellax('.rellax', {
+      speed: -2,
+      center: true,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+  });
+
+  // Vérifier les appareils mobiles et ajuster si nécessaire
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+      rellax.destroy(); // Désactiver Rellax sur mobile
+  }
+});
+*/
